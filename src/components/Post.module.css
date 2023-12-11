@@ -62,3 +62,67 @@ time {
 .content a:hover {
     color: var(--green);
 }
+
+footer {
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--gray-3-divider)
+}
+
+.commentForm {
+    width: 100%;
+}
+
+.commentForm > strong {
+    color: var(--gray-7-text-titles); 
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin-top: 1.6rem; 
+    height: 9.6rem;
+    color: var(--gray-6-text); 
+    background-color: var(--gray-1-background);
+    padding: 1.3rem 1.6rem;
+    border-radius: 8px;
+    border: 0;
+    line-height: 1.4;
+    
+}
+
+textarea::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+
+.commentButton {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.commentButton button[type=submit] {
+    padding: 1.6rem 2.4rem; 
+    margin-top: 1.6rem;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--green);
+    color: var(--white);
+    cursor: pointer;
+
+    transition: background-color 0.1s;
+
+}
+
+.commentButton button[type=submit]:hover {
+    background-color: var(--green-light);
+}
+
+.commentForm:focus-within .commentButton{
+    visibility: visible;
+    max-height: none;
+    
+}

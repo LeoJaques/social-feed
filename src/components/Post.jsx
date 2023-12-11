@@ -1,7 +1,7 @@
 import './Post.module.css'
 import styles from './Post.module.css'
 
-export function Post(props) {
+export function Post() {
     return (
         <article className={styles.post}>
 
@@ -31,7 +31,19 @@ export function Post(props) {
 
             </main>
 
-            <footer></footer>
+            <footer>
+                <form className={styles.commentForm}>
+
+                <strong>Deixe deu feedback</strong>
+
+                <textarea 
+                placeholder='Escreva um comentário'/>   
+
+                <div className={styles.commentButton}>
+                    <button type="submit">Publicar</button>    
+                </div>         
+                </form>
+            </footer>
 
         </article>
     )
