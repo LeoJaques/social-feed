@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 
+    
+}
+:root {
+
     --white: #fff;
     --green: #00875F;
     --green-light: #00B37E;
@@ -15,12 +19,15 @@
     --gray-5-supporting-text: #8D8D99;
     --gray-6-text: #C4C4CC;
     --gray-7-text-titles: #E1E1E6;
+    
+    --red-danger: #F75A68;
 
-
-  }
-
-:root {
     font-size: 62.5%;
+}
+
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--green)
 }
 
 body {
