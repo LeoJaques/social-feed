@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+    background-color: var(--gray-2-cards);
+    font-size: 2.556rem;
+}
+.header .logo {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.6rem;
+}
