@@ -67,4 +67,6 @@
 .sidebar footer a:hover{
     color: var(--white);
     background-color: var(--green);
+    border: 1px solid var(--green);
+
 }
