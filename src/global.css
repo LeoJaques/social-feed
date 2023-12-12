@@ -19,10 +19,16 @@
     --gray-5-supporting-text: #8D8D99;
     --gray-6-text: #C4C4CC;
     --gray-7-text-titles: #E1E1E6;
+    --gray-8-comment: #29292E;
     
     --red-danger: #F75A68;
 
+}
+
+
+html {
     font-size: 62.5%;
+
 }
 
 :focus {
@@ -43,4 +49,10 @@ button {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 52.5%;
+    }
 }
