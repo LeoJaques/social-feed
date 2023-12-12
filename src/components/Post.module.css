@@ -19,23 +19,15 @@
     gap: 1.6rem;
 }
 
-.avatar {
-    box-sizing: initial; 
-    width: 6rem;
-    height: 6rem;
-    border-radius: 8px;
-    border: 4px solid var(--gray-3-divider);
-    outline: 2px solid var(--green-light);
-}
 
-.authorInfo strong {
+.authorInfo > strong {
  display: block;
  color: var(--gray-7-text-titles);   
  line-height: 1.6;
 
 }
 
-.authorInfo span,
+.authorInfo > span,
 time {
  display: block;
  color: var(--gray-5-supporting-text);
@@ -63,7 +55,7 @@ time {
     color: var(--green);
 }
 
-footer {
+.content footer {
     margin-top: 2.4rem;
     padding-top: 2.4rem;
     border-top: 1px solid var(--gray-3-divider)
@@ -125,4 +117,8 @@ textarea::-webkit-input-placeholder {
     visibility: visible;
     max-height: none;
     
+}
+
+.commentList {
+    margin-top: 2.4rem;
 }
