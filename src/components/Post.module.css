@@ -55,7 +55,7 @@ time {
     color: var(--green);
 }
 
-.content footer {
+.post footer {
     margin-top: 2.4rem;
     padding-top: 2.4rem;
     border-top: 1px solid var(--gray-3-divider)
