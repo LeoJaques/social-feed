@@ -4,32 +4,46 @@ import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import './Post.module.css'
 import styles from './Post.module.css'
+import { useState } from 'react'
 
-export function Post({ autor, conteudo, dataPublicacao }) {
 
-    const formatDate = format(dataPublicacao, "dd 'de' MMMM yyyy 'às' HH:mm'h'", { locale: ptBR })
+export function Post({ author, content, publishedAt }) {
 
-    const publicationTime = formatDistanceToNow(dataPublicacao, {
+    const formatDate = format(publishedAt, "dd 'de' MMMM yyyy 'às' HH:mm'h'", { locale: ptBR })
+
+    const publicationTime = formatDistanceToNow(publishedAt, {
         addSuffix: true,
         locale: ptBR
     })
+
+    const [comments, setComment] = useState([])
+
+    function handleCreateNewComment() {
+        event.preventDefault()
+        
+        const newComments = [...comments, "New Comment"];
+
+        setComment(newComments);
+
+    }
+
     return (
         <article className={styles.post}>
 
             <header>
                 <div className={styles.author}>
-                    <Avatar url={autor.avatarUrl} />
+                    <Avatar url={author.avatarUrl} />
                     <div className={styles.authorInfo}>
-                        <strong>{autor.name}</strong>
-                        <span>{autor.role}</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
-                <time title={formatDate} dateTime={dataPublicacao.toISOString()}> Públicado {publicationTime}</time>
+                <time title={formatDate} dateTime={publishedAt.toISOString()}> Públicado {publicationTime}</time>
             </header>
 
             <main className={styles.content}>
-                {conteudo.map(line => {
+                {content.map(line => {
                     if (line.type === 'paragraph') {
                         return <p>{line.content}</p>
                     } else if (line.type === 'link') {
@@ -42,7 +56,8 @@ export function Post({ autor, conteudo, dataPublicacao }) {
             </main>
 
             <footer>
-                <form className={styles.commentForm}>
+                
+                <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
 
                     <strong>Deixe deu feedback</strong>
 
@@ -56,7 +71,9 @@ export function Post({ autor, conteudo, dataPublicacao }) {
             </footer>
 
             <div className={styles.commentList}>
-                <Comment />
+                {comments.map(comment => {
+                    return <Comment />
+                })}
 
             </div>
         </article>
