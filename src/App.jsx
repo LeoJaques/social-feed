@@ -43,6 +43,7 @@ const posts = [
 
 
 
+
 export function App() {
   return (
     <>
@@ -55,9 +56,9 @@ export function App() {
             return (
               <Post 
               key={post.id}
-              autor ={post.author}
-              conteudo = {post.content}
-              dataPublicacao = {post.publishedAt}
+              author ={post.author}
+              content = {post.content}
+              publishedAt = {post.publishedAt}
               />
               )
           })}
