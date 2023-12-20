@@ -1,4 +1,4 @@
-import { Dot, ThumbsUp, Trash } from '@phosphor-icons/react/dist/ssr'
+import { ThumbsUp, Trash } from '@phosphor-icons/react/dist/ssr'
 import styles from './Comment.module.css'
 import { Avatar } from './Avatar'
 
